@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
@@ -18,8 +20,11 @@
   "author": "Jacob William Chavez Templeton",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.5"
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1"
   },
   "bugs": {
     "url": "https://github.com/JWCTempleton/web-portfolio/issues"
