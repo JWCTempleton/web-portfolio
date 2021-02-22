@@ -60,9 +60,15 @@
     background-color: rgb(255, 255, 255);
     grid-column: center-start / center-end;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 15rem;
 
     &__picture {
-        flex: 1 1 50rem;
+        flex: 1 0 30rem;
+        margin-right: 4rem;
+        filter: saturate(125%) blur(.2px);
 
         &__img {
             border-radius: 50%;
@@ -73,20 +79,96 @@
     }
 
     &__content {
-        flex: 2 1 70rem; 
+        flex: 1 1 70rem; 
+        margin: 2rem 6rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        line-height: 2.2;   
+
+
+        &__btn {
+            margin-top: 3rem;
+        }
     }
 }
 
 .my-experience {
     background-color: white;
     grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 6rem;
+    justify-content: center;
 
+    .project {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        &__heading {
+            justify-self: center;
+        }
+        &__text {
+            padding: 3rem;
+            color: rgb(32, 32, 32);
+            //font-size: 1.5rem;
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+            font-weight: 700;
+            ul {
+                list-style: none;
+                li {
+                    text-align: center;
+                    padding: 1rem;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #eee;
+                    }
+                }
+            }
+        }
+        &__icon {
+            grid-row: 1 / span 2;
+            fill:rgba(20, 238, 20, 0.637);
+            width: 4.5rem;
+            height: 4.5rem;
+            transform: translateY(-1.5rem) translateX(3rem);
+            justify-self: end;
+        }
+    }
 }
 
 .contact-me {
     grid-column: center-start / center-end;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin: 5rem 0 5rem 0;
+
+    .title {
+        margin-bottom: 4rem;
+    }
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .input {
+        width:60rem;
+        //max-width: 100%;
+        height: 3rem;
+        padding-left: 1rem;
+    }
+    .textarea {
+        width: 80rem;
+        height: 8rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-family: inherit;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .footer {

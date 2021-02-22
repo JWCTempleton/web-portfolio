@@ -63,25 +63,89 @@ body {
 .about-me {
   background-color: white;
   grid-column: center-start / center-end;
-  display: flex; }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 15rem; }
   .about-me__picture {
-    flex: 1 1 50rem; }
+    flex: 1 0 30rem;
+    margin-right: 4rem;
+    filter: saturate(125%) blur(0.2px); }
     .about-me__picture__img {
       border-radius: 50%;
       width: 100%;
       background-size: cover;
       background-position: center; }
   .about-me__content {
-    flex: 2 1 70rem; }
+    flex: 1 1 70rem;
+    margin: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    line-height: 2.2; }
+    .about-me__content__btn {
+      margin-top: 3rem; }
 
 .my-experience {
   background-color: white;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 6rem;
+  justify-content: center; }
+  .my-experience .project {
+    display: grid;
+    grid-template-columns: min-content 1fr; }
+    .my-experience .project__heading {
+      justify-self: center; }
+    .my-experience .project__text {
+      padding: 3rem;
+      color: #202020;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+      font-weight: 700; }
+      .my-experience .project__text ul {
+        list-style: none; }
+        .my-experience .project__text ul li {
+          text-align: center;
+          padding: 1rem; }
+          .my-experience .project__text ul li:not(:last-child) {
+            border-bottom: 1px solid #eee; }
+    .my-experience .project__icon {
+      grid-row: 1 / span 2;
+      fill: rgba(20, 238, 20, 0.637);
+      width: 4.5rem;
+      height: 4.5rem;
+      transform: translateY(-1.5rem) translateX(3rem);
+      justify-self: end; }
 
 .contact-me {
   grid-column: center-start / center-end;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  margin: 5rem 0 5rem 0; }
+  .contact-me .title {
+    margin-bottom: 4rem; }
+  .contact-me .input-fields {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; }
+  .contact-me .input {
+    width: 60rem;
+    height: 3rem;
+    padding-left: 1rem; }
+  .contact-me .textarea {
+    width: 80rem;
+    height: 8rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-family: inherit;
+    margin-bottom: 2.5rem; }
 
 .footer {
   grid-column: full-start / full-end;
