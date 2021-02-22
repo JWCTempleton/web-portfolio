@@ -1,0 +1,99 @@
+.container {
+    //max-width: 120rem;
+    margin: 2.5rem 2.6rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
+    [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 90vh repeat(4,min-content);
+    
+}
+
+.header {
+    background-image: url(../img/header_background.jpg);
+    grid-column: full-start / full-end;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+
+    &__logo-box {
+        position: absolute;
+        top:5rem;
+        left:4rem;
+    }
+
+    &__logo{
+        box-sizing: border-box;
+        height: 8rem;
+        animation: fadeIn 2.5s;
+    }
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    &--main {
+        font-size: 3rem;
+        letter-spacing: 1.6rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: 1.3rem;
+
+    }
+}
+
+.about-me {
+    background-color: rgb(255, 255, 255);
+    grid-column: center-start / center-end;
+    display: flex;
+
+    &__picture {
+        flex: 1 1 50rem;
+
+        &__img {
+            border-radius: 50%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__content {
+        flex: 2 1 70rem; 
+    }
+}
+
+.my-experience {
+    background-color: white;
+    grid-column: center-start / center-end;
+
+}
+
+.contact-me {
+    grid-column: center-start / center-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    grid-column: full-start / full-end;
+    display: flex;
+    color: darkgray;
+    background-color: black;
+    font-size: 1.5rem;
+    align-content: center;
+}

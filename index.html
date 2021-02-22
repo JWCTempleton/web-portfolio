@@ -11,7 +11,126 @@
 </head>
 
 <body>
+    <div class="container">
+        <header class="header" id="header">
+            <div class="header__logo-box jump-animation">
+                <img src="img/avocado.png" alt="Avocado Logo" class="header__logo">
+            </div>
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Jacob WC Templeton</span>
+                    <span class="heading-primary--sub typewriter-animation">is a web developer.</span>
+                </h1>
+            </div>
+            <div class="button-div">
+                <a href="#about-me" class="learn-more btn btn--white">Learn More</a>
+                <span class=header__button-span>or</span>
+                <a href="#contact-me" class="btn btn--white">Contact Me</a>
+            </div>
 
+        </header>
+        <main class="about-me" id="about-me">
+            <figure class="about-me__picture">
+                <img src="img/about-me__jwct.png" alt="Picture of me" class="about-me__picture__img">
+            </figure>
+            <div class="about-me__content">
+                <p>
+                    In 2019 I graduated from St. Mary's College of California Summa Cum Laude with a B.S. in Business
+                    Administration.
+                </p>
+                <br>
+                <p>
+                    While at St. Mary's I was selected for the first year of the Technology
+                    and Engineering in Business (TEB) Certification Program. In TEB I learned about programming and web
+                    development and decided to pursue it as a career.
+                </p>
+                <br>
+                <p>
+                    This website was designed and written from scratch with HTML and CSS. Special care was given to
+                    responsive design that will display properly on any size screen.
+                </p>
+                <a href="#my-experience" class="btn btn--blue about-me__content__btn">My Experience</a>
+
+
+            </div>
+        </main>
+        <div class="my-experience" id="my-experience">
+            <div class="project">
+                <svg class="project__icon">
+                    <use xlink:href="img/sprite.svg#icon-quill"></use>
+                </svg>
+                <h4 class="project__heading heading-4">TEB Certification</h4>
+                <div class="project__text">
+                    <ul>
+                        <li>Github</li>
+                        <li>Python</li>
+                        <li>DB backed Web Development</li>
+                        <li>Google Cloud</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <svg class="project__icon">
+                    <use xlink:href="img/sprite.svg#icon-location-park"></use>
+                </svg>
+                <h4 class="project__heading heading-4">Restless Bandit</h4>
+                <div class="project__text">
+                    <ul>
+                        <li>Extracted data from T-SQL database</li>
+                        <li>Performed qualitative data analysis</li>
+                        <li>Cleaned data to comply with new DB standards</li>
+                        <li>Loaded data to normalized PostgreSQL DB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <svg class="project__icon">
+                    <use xlink:href="img/sprite.svg#icon-hot"></use>
+                </svg>
+                <h4 class="project__heading heading-4">Full Stack Project</h4>
+                <div class="project__text">
+                    <ul>
+                        <li>React Single Page App</li>
+                        <li>User login authentication</li>
+                        <li>Node Server with Express</li>
+                        <li>PostgreSQL database of customer orders</li>
+                        <li>Deployment on Heroku</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contact-me" id="contact-me">
+            <form action="mailto:jacob.templeton@gmail.com" method="GET" target="_blank">
+                <h1 class="title">Send Email to jacob.templeton@gmail.com</h1>
+                <div class="input-fields">
+                    <div class="field"><label class="label" for="subject">Email Subject</label></br>
+                        <input name="subject" id="subject" type="text" class="input" value="">
+                    </div>
+                    <div class="field"><label class="label" for="body">Email Body</label></br>
+                        <textarea class="textarea" name="body" id="body"></textarea>
+                    </div>
+                </div>
+                <div><input type="submit" value="Create Email" class="btn btn--blue is-primary"></div>
+            </form>
+        </div>
+        <footer class="footer">
+            <a href="#header">
+                <div class="footer__logo-box jump-animation">
+                    <img src="img/avocado.png" alt="Avocado Logo" class="header__logo">
+                </div>
+            </a>
+
+            <p class="footer__copyright">
+                Built by <a href="https://www.linkedin.com/in/jwctempleton/" class="footer__link-name">Jacob
+                    Templeton</a>
+                for his online portfolio.<br>
+                Copyright
+                &copy; by Jacob Templeton. You may use this page for personal use but I do not give my permission to
+                claim
+                my work as your own.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
