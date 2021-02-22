@@ -1,3 +1,12 @@
+//MEDIA QUERIES
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 56.25em; //900px
+$bp-small: 43.75em; //700px
+$bp-smaller: 37.5em; //600px
+$bp-smallest: 25em; //400px
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +21,25 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem=10px (10px/16px root)
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 58%;
+    }
+    @media only screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 52%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+        font-size: 48%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 46%;
+    }
+    scroll-behavior: smooth;
 }
 
 body {
