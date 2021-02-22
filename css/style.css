@@ -49,10 +49,9 @@ body {
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1 1 auto; }
+  align-items: center; }
   .heading-primary--main {
-    font-size: 3rem;
+    font-size: 2.8rem;
     letter-spacing: 1.6rem;
     margin-top: 4rem;
     margin-bottom: 3rem; }
@@ -90,15 +89,17 @@ body {
 .my-experience {
   background-color: white;
   grid-column: center-start / center-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 6rem;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center; }
   .my-experience .project {
-    display: grid;
-    grid-template-columns: min-content 1fr; }
+    width: 30rem;
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: column nowrap;
+    align-items: center; }
     .my-experience .project__heading {
-      justify-self: center; }
+      font-size: 1.8rem; }
     .my-experience .project__text {
       padding: 3rem;
       color: #202020;
@@ -118,7 +119,8 @@ body {
       width: 4.5rem;
       height: 4.5rem;
       transform: translateY(-1.5rem) translateX(3rem);
-      justify-self: end; }
+      align-self: flex-start;
+      transform: translateX(1rem) translateY(2.5rem); }
 
 .contact-me {
   grid-column: center-start / center-end;
@@ -153,7 +155,23 @@ body {
   color: darkgray;
   background-color: black;
   font-size: 1.5rem;
-  align-content: center; }
+  justify-content: center;
+  align-items: center; }
+  .footer__logo-box {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 3rem; }
+  .footer__link-name:link, .footer__link-name:visited {
+    background-color: black;
+    color: darkgray;
+    text-decoration: none;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    transition: all .2s; }
+  .footer__link-name:hover, .footer__link-name:active {
+    color: darkorange;
+    backface-visibility: hidden; }
 
 .btn {
   font-size: 1.2rem;

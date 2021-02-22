@@ -42,9 +42,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1 auto;
     &--main {
-        font-size: 3rem;
+        font-size: 2.8rem;
         letter-spacing: 1.6rem;
         margin-top: 4rem;
         margin-bottom: 3rem;
@@ -96,21 +95,26 @@
 .my-experience {
     background-color: white;
     grid-column: center-start / center-end;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 6rem;
+    display: flex;
+    //grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    //grid-gap: 6rem;
+    flex-flow: row wrap;
     justify-content: center;
 
     .project {
-        display: grid;
-        grid-template-columns: min-content 1fr;
+        width: 30rem;
+        display: flex;
+        flex: 0 1 auto;
+        flex-flow: column nowrap;
+        align-items: center;
+        //grid-template-columns: min-content 1fr;
         &__heading {
-            justify-self: center;
+            //justify-self: center;
+            font-size: 1.8rem;
         }
         &__text {
             padding: 3rem;
             color: rgb(32, 32, 32);
-            //font-size: 1.5rem;
             font-size: 1.5rem;
             line-height: 3.5rem;
             font-weight: 700;
@@ -119,7 +123,6 @@
                 li {
                     text-align: center;
                     padding: 1rem;
-
                     &:not(:last-child) {
                         border-bottom: 1px solid #eee;
                     }
@@ -132,7 +135,8 @@
             width: 4.5rem;
             height: 4.5rem;
             transform: translateY(-1.5rem) translateX(3rem);
-            justify-self: end;
+            align-self: flex-start;
+            transform: translateX(1rem) translateY(2.5rem);
         }
     }
 }
@@ -177,5 +181,37 @@
     color: darkgray;
     background-color: black;
     font-size: 1.5rem;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
+    //flex-direction: column;
+    &__logo-box {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 3.5rem;
+        padding-right: 3rem;
+    }
+        &__link-name {
+            &:link,&:visited {
+                background-color: black;
+                color: darkgray;
+                text-decoration: none;
+                text-transform: uppercase;
+                //display: inline-block;
+                // align-items: center;
+                // justify-content: center;
+                backface-visibility: hidden;
+                transition: all .2s;
+            }
+            &:hover,&:active {
+                color: darkorange;
+                backface-visibility: hidden;
+            }   
+        }
+    //     &__copyright {
+    //         display: flex;
+    //         //flex-flow: column wrap;
+    //         // justify-content: center;   
+    //         // align-items: center;     
+    //     }
+    
 }
