@@ -110,7 +110,7 @@ body {
   .about-me__picture {
     flex: 1 0 30rem;
     margin-right: 4rem;
-    filter: saturate(115%) blur(0.2px); }
+    filter: saturate(115%); }
     @media only screen and (max-width: 56.25em) {
       .about-me__picture {
         width: 35rem; } }

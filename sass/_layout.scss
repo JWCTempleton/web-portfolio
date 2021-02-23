@@ -90,7 +90,7 @@
     &__picture {
         flex: 1 0 30rem;
         margin-right: 4rem;
-        filter: saturate(115%) blur(.2px);
+        filter: saturate(115%);
         @media only screen and (max-width: $bp-medium) {
             width: 35rem;
         }
