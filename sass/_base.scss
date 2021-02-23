@@ -20,22 +20,24 @@ $bp-smallest: 25em; //400px
 
 html {
     box-sizing: border-box;
+    
     font-size: 62.5%; //1rem=10px (10px/16px root)
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 58%;
-    }
-    @media only screen and (max-width: $bp-large) {
-        font-size: 55%;
-    }
+    // @media only screen and (max-width: $bp-largest) {
+    //     font-size: 58%;
+    // }
+    // @media only screen and (max-width: $bp-large) {
+    //     font-size: 55%;
+    // }
+    
     @media only screen and (max-width: $bp-medium) {
         font-size: 52%;
     }
     @media only screen and (max-width: $bp-small) {
-        font-size: 50%;
-    }
-    @media only screen and (max-width: $bp-smaller) {
         font-size: 48%;
     }
+    // @media only screen and (max-width: $bp-smaller) {
+    //     font-size: 48%;
+    // }
     @media only screen and (max-width: $bp-smallest) {
         font-size: 46%;
     }

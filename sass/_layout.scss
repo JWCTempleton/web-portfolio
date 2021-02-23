@@ -7,6 +7,12 @@
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
     [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-rows: 90vh repeat(4,min-content);
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: [full-start] minmax(2rem, 1fr) 
+        [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
+        [center-end] minmax(2rem, 1fr) [full-end];
+        grid-template-rows: 90vh repeat(4,min-content);
+    }
     
 }
 
@@ -17,27 +23,46 @@
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     position: relative;
     align-items: center;
     justify-content: space-around;
+    
 
     &__logo-box {
         position: absolute;
         top:5rem;
         left:4rem;
+        &:hover {
+            animation: jump-animation 1s ease-out;
+            transform-origin: bottom;
+        }
     }
 
     &__logo{
         box-sizing: border-box;
         height: 8rem;
         animation: fadeIn 2.5s;
+        @media only screen and (max-width: $bp-medium) {
+            height: 6rem;
+        }
     }
     &__button {
         &-span {
             color:white;
             font-size: 1.8rem;
             margin: 0 3rem;
+            @media only screen and (max-width: $bp-small) {
+                margin: 1rem auto
+    
+            }
+        }
+    }
+    .button-div {
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+
         }
     }
 }
@@ -55,8 +80,10 @@
         letter-spacing: 1.6rem;
         margin-top: 4rem;
         margin-bottom: 3rem;
-        @media only screen and (max-width: $bp-smaller) {
-            font-size: 2rem;
+        animation: moveInLeft 2s ease-out;
+        @media only screen and (max-width: $bp-small) {
+            flex-wrap: wrap;
+            font-size: 1.5rem;
             letter-spacing: 1.2rem;
         }
     }
@@ -64,8 +91,10 @@
         font-family: 'Raleway', sans-serif;
         font-size: 2rem;
         letter-spacing: 1.3rem;
+        animation: fadeIn 2s ease-out;
+
         @media only screen and (max-width: $bp-smaller) {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             letter-spacing: 1.1rem;
         }
     }
@@ -85,6 +114,7 @@
         flex-wrap: nowrap;
         align-items: center;
         margin: 8rem auto 4rem auto;
+        //max-width: 95vw;
     }
 
     &__picture {
@@ -93,6 +123,9 @@
         filter: saturate(115%);
         @media only screen and (max-width: $bp-medium) {
             width: 35rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            width: 28rem;
         }
 
         &__img {
@@ -113,6 +146,9 @@
         line-height: 2.2;   
         @media only screen and (max-width: $bp-medium) {
             width: 50rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            width: 28rem;
         }
 
         &__btn {
@@ -172,6 +208,13 @@
         max-width: 40rem;
         margin: 0 auto;
     }
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        max-width: 30rem;
+        margin: 0 auto;
+    }
 }
 
 .contact-me {
@@ -184,13 +227,16 @@
     font-size: 1.5rem;
     line-height: 3.5rem;
     margin: 5rem auto;
-
+    
     .center {
         margin: 2rem auto;
     }
 
     .title {
         margin-bottom: 4rem;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.4rem;
+        }
     }
     .input-fields {
         display: flex;
@@ -200,21 +246,31 @@
     .input {
         height: 3rem;
         padding-left: 1rem;
-        width: 50vw;
+        width: 40rem;
+        @media only screen and (max-width: $bp-small) {
+            width: 30rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            width: 25rem;
+        }
     }
     .textarea {
-        width: 55vw;
+        width: 50rem;
         height: 8rem;
         padding-left: 1rem;
         padding-top: 1rem;
         font-family: inherit;
         margin-bottom: 2.5rem;
+        @media only screen and (max-width: $bp-small) {
+            width: 37rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            width: 30rem;
+        }
     }
     
     
 }
-
-
 .footer {
     grid-column: full-start / full-end;
     display: flex;
@@ -228,9 +284,8 @@
         padding-bottom: 1rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        @media only screen and (max-width: $bp-smaller) {
-            padding: none;
-            align-self: center;
+        @media only screen and (max-width: $bp-medium) {
+            height: 6rem;
         }
     }
         &__link-name {
@@ -253,6 +308,7 @@
         @media only screen and (max-width: $bp-medium) {
             max-width: 69vw;
             justify-content: flex-start;
+            font-size: 1.2rem;
         }
     }
 }
