@@ -40,7 +40,6 @@ body {
   background-color: white;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   display: grid;
-  max-width: 150rem;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 90vh repeat(4, min-content); }
 
