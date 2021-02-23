@@ -40,7 +40,7 @@ body {
   background-color: white;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   display: grid;
-  width: 100%;
+  max-width: 150rem;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 90vh repeat(4, min-content); }
 
@@ -63,6 +63,10 @@ body {
     box-sizing: border-box;
     height: 8rem;
     animation: fadeIn 2.5s; }
+  .header__button-span {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 3rem; }
 
 .heading-primary {
   color: white;
@@ -71,6 +75,7 @@ body {
   flex-direction: column;
   align-items: center; }
   .heading-primary--main {
+    font-family: 'Bitter', serif;
     font-size: 2.8rem;
     letter-spacing: 1.6rem;
     margin-top: 4rem;
@@ -80,6 +85,7 @@ body {
         font-size: 2rem;
         letter-spacing: 1.2rem; } }
   .heading-primary--sub {
+    font-family: 'Raleway', sans-serif;
     font-size: 2rem;
     letter-spacing: 1.3rem; }
     @media only screen and (max-width: 37.5em) {
@@ -93,7 +99,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 8rem;
+  margin-top: 12rem;
   margin-bottom: 12rem; }
   @media only screen and (max-width: 56.25em) {
     .about-me {
@@ -105,7 +111,7 @@ body {
   .about-me__picture {
     flex: 1 0 30rem;
     margin-right: 4rem;
-    filter: saturate(125%) blur(0.2px); }
+    filter: saturate(115%) blur(0.2px); }
     @media only screen and (max-width: 56.25em) {
       .about-me__picture {
         width: 35rem; } }
@@ -115,6 +121,7 @@ body {
       background-size: cover;
       background-position: center; }
   .about-me__content {
+    font-family: 'Raleway', sans-serif;
     flex: 1 1 70rem;
     margin: 2rem 6rem;
     display: flex;
@@ -125,7 +132,7 @@ body {
       .about-me__content {
         width: 50rem; } }
     .about-me__content__btn {
-      margin-top: 3rem; }
+      margin: 5rem auto; }
 
 .my-experience {
   background-color: white;
@@ -139,8 +146,10 @@ body {
     flex-flow: column nowrap;
     align-items: center; }
     .my-experience .project__heading {
+      font-family: 'Bitter', serif;
       font-size: 1.8rem; }
     .my-experience .project__text {
+      font-family: 'Raleway', sans-serif;
       padding: 3rem;
       color: #202020;
       font-size: 1.5rem;
@@ -169,14 +178,17 @@ body {
       margin: 0 auto; } }
 
 .contact-me {
+  font-family: 'Bitter', serif;
   grid-column: center-start / center-end;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
-  align-items: center;
   padding: 2rem;
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin: 5rem auto; }
+  .contact-me .center {
+    margin: 2rem auto; }
   .contact-me .title {
     margin-bottom: 4rem; }
   .contact-me .input-fields {
@@ -188,19 +200,17 @@ body {
     padding-left: 1rem;
     width: 50vw; }
   .contact-me .textarea {
-    width: 60vw;
+    width: 55vw;
     height: 8rem;
     padding-left: 1rem;
     padding-top: 1rem;
     font-family: inherit;
     margin-bottom: 2.5rem; }
-  .contact-me .is-primary {
-    align-self: center; }
 
 .footer {
   grid-column: full-start / full-end;
   display: flex;
-  max-width: 100%;
+  width: 100%;
   flex: 1 1 auto;
   color: darkgray;
   background-color: black;
@@ -225,8 +235,9 @@ body {
     color: darkorange;
     backface-visibility: hidden; }
   .footer__copyright {
+    font-family: "Raleway";
     padding: 3rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         max-width: 69vw;
         justify-content: flex-start; } }
