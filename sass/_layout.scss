@@ -3,7 +3,8 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
     display: grid;
-    width: 100%;
+    //width: 100%;
+    max-width: 150rem;
     grid-template-columns: [full-start] minmax(6rem, 1fr) 
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
     [center-end] minmax(6rem, 1fr) [full-end];
@@ -34,6 +35,13 @@
         height: 8rem;
         animation: fadeIn 2.5s;
     }
+    &__button {
+        &-span {
+            color:white;
+            font-size: 1.8rem;
+            margin: 0 3rem;
+        }
+    }
 }
 
 .heading-primary {
@@ -44,6 +52,7 @@
     align-items: center;
     
     &--main {
+        font-family: 'Bitter', serif;
         font-size: 2.8rem;
         letter-spacing: 1.6rem;
         margin-top: 4rem;
@@ -54,6 +63,7 @@
         }
     }
     &--sub {
+        font-family: 'Raleway', sans-serif;
         font-size: 2rem;
         letter-spacing: 1.3rem;
         @media only screen and (max-width: $bp-smaller) {
@@ -69,7 +79,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 12rem;
     margin-bottom: 12rem;
     @media only screen and (max-width: $bp-medium) {
         display: flex;
@@ -82,7 +92,7 @@
     &__picture {
         flex: 1 0 30rem;
         margin-right: 4rem;
-        filter: saturate(125%) blur(.2px);
+        filter: saturate(115%) blur(.2px);
         @media only screen and (max-width: $bp-medium) {
             width: 35rem;
         }
@@ -96,6 +106,7 @@
     }
 
     &__content {
+        font-family: 'Raleway', sans-serif;
         flex: 1 1 70rem; 
         margin: 2rem 6rem;
         display: flex;
@@ -107,7 +118,7 @@
         }
 
         &__btn {
-            margin-top: 3rem;
+            margin: 5rem auto;
         }
     }
    
@@ -126,9 +137,11 @@
         flex-flow: column nowrap;
         align-items: center;
         &__heading {
+            font-family: 'Bitter', serif;
             font-size: 1.8rem;
         }
         &__text {
+            font-family: 'Raleway', sans-serif;
             padding: 3rem;
             color: rgb(32, 32, 32);
             font-size: 1.5rem;
@@ -164,14 +177,19 @@
 }
 
 .contact-me {
+    font-family: 'Bitter', serif;
     grid-column: center-start / center-end;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    align-items: center;
     padding: 2rem;
     font-size: 1.5rem;
     line-height: 3.5rem;
     margin: 5rem auto;
+
+    .center {
+        margin: 2rem auto;
+    }
 
     .title {
         margin-bottom: 4rem;
@@ -187,16 +205,14 @@
         width: 50vw;
     }
     .textarea {
-        width: 60vw;
+        width: 55vw;
         height: 8rem;
         padding-left: 1rem;
         padding-top: 1rem;
         font-family: inherit;
         margin-bottom: 2.5rem;
     }
-    .is-primary {
-        align-self: center;    
-    }
+    
     
 }
 
@@ -204,7 +220,7 @@
 .footer {
     grid-column: full-start / full-end;
     display: flex;
-    max-width: 100%;
+    width: 100%;
     flex: 1 1 auto;
     color: darkgray;
     background-color: black;
@@ -234,8 +250,9 @@
             }   
         }
     &__copyright {
+        font-family: "Raleway";
         padding: 3rem;
-        @media only screen and (max-width: $bp-smaller) {
+        @media only screen and (max-width: $bp-medium) {
             max-width: 69vw;
             justify-content: flex-start;
         }
