@@ -36,7 +36,8 @@ body {
   @media only screen and (max-width: 43.75em) {
     .container {
       grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
-      grid-template-rows: 90vh repeat(4, min-content); } }
+      grid-template-rows: 90vh repeat(4, min-content);
+      margin: 0 0; } }
 
 .header {
   background-image: url(../img/header_background.jpg);

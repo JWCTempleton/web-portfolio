@@ -12,6 +12,7 @@
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
         [center-end] minmax(1rem, 1fr) [full-end];
         grid-template-rows: 90vh repeat(4,min-content);
+        margin:0 0;
     }
     
 }
