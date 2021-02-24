@@ -8,9 +8,9 @@
     [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-rows: 90vh repeat(4,min-content);
     @media only screen and (max-width: $bp-small) {
-        grid-template-columns: [full-start] minmax(2rem, 1fr) 
+        grid-template-columns: [full-start] minmax(1rem, 1fr) 
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) 
-        [center-end] minmax(2rem, 1fr) [full-end];
+        [center-end] minmax(1rem, 1fr) [full-end];
         grid-template-rows: 90vh repeat(4,min-content);
     }
     
@@ -27,6 +27,11 @@
     position: relative;
     align-items: center;
     justify-content: space-around;
+
+    &__text-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
     
 
     &__logo-box {
@@ -53,8 +58,7 @@
             font-size: 1.8rem;
             margin: 0 3rem;
             @media only screen and (max-width: $bp-small) {
-                margin: 1rem auto
-    
+                margin: 1rem auto;
             }
         }
     }
@@ -82,20 +86,27 @@
         margin-bottom: 3rem;
         animation: moveInLeft 2s ease-out;
         @media only screen and (max-width: $bp-small) {
-            flex-wrap: wrap;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             letter-spacing: 1.2rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: .8rem;
+            letter-spacing: 1rem;
         }
     }
     &--sub {
+        display: flex;
         font-family: 'Raleway', sans-serif;
         font-size: 2rem;
         letter-spacing: 1.3rem;
         animation: fadeIn 2s ease-out;
-
-        @media only screen and (max-width: $bp-smaller) {
-            font-size: 1.2rem;
-            letter-spacing: 1.1rem;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1rem;
+            letter-spacing: 1rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: .8rem;
+            letter-spacing: .8rem;
         }
     }
 }
@@ -125,7 +136,7 @@
             width: 35rem;
         }
         @media only screen and (max-width: $bp-small) {
-            width: 28rem;
+            width: 24rem;
         }
 
         &__img {
@@ -212,7 +223,7 @@
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
-        max-width: 30rem;
+        max-width: 24rem;
         margin: 0 auto;
     }
 }
