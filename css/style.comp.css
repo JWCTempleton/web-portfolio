@@ -40,7 +40,7 @@ body {
       margin: 0 0; } }
 
 .header {
-  background-image: url(../img/header_background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(131, 234, 247, 0.4)), url(../img/header_background.jpg);
   grid-column: full-start / full-end;
   display: flex;
   flex-direction: column;
