@@ -10,3 +10,5 @@ Beyond using this as an opportunity to learn about the basics of web development
 To that end, I used SCSS compiled through a node package as css as well as other node packages that can be seen in the package.json file.
 
 I really, really enjoyed playing around with node and using packages like autoprefixer to solve problems that I had been concerned with (for example trying out modern css animations and being frustrated when it worked in chrome but not on another browser).
+
+I also really enjoyed learning about node scripts, very cool.
